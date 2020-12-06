@@ -1,0 +1,21 @@
+class Particle {
+    constructor(x,y,r){
+      var options = {
+          restitution:0.4
+
+      }
+
+      this.r = r
+
+      this.body = Bodies.circle(x, y, this.r, options)
+      this.color = color(randon(0, 255)),  randon(0, 255), randon(0, 255)
+      World.add(world, this.body)
+    }
+    display() {
+      var pos = this.body.position
+      rectMode(CENTER)
+      fill("white")
+      rect(pos.x, pos.y, this.w, this.h)
+    }
+
+}
